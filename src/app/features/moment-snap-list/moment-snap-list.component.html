@@ -1,0 +1,47 @@
+<!-- moment-snap-list.component.html -->
+<div class="explore-page">
+  <!-- Header et catégories comme avant -->
+  <header class="explore-header">
+    <h1>2,832 Captured Moments to Explore</h1>
+    <p>Discover beautiful memories shared by our community</p>
+  </header>
+
+  <!-- Popular Categories -->
+  <section class="categories-section">
+    <h2>Trending Collections</h2>
+    <div class="category-tags">
+      @for (tag of popularTags; track tag) {
+        <button [class.active]="activeTag === tag"
+                (click)="filterByTag(tag)">
+          {{ tag }}
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Photo Grid -->
+  <div class="photo-grid">
+    @for (photo of displayedPhotos; track photo.id) {
+      <app-moment-snap
+        [momentSnap]="photo"
+        [isLiked]="isLiked(photo.id)"
+        (likeClicked)="toggleLike(photo.id, $event)"
+        (photoClicked)="viewDetails(photo.id)">
+      </app-moment-snap>
+    }
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    @if (hasMorePhotos) {
+      <button (click)="loadMore()" class="load-more-btn">
+        Load More
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    } @else {
+      <p class="end-message">
+        You've reached the end! Come back later for new moments.
+      </p>
+    }
+  </div>
+</div>

@@ -1,0 +1,130 @@
+@import "../../../../colors";
+
+/* CTA Buttons */
+.cta-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.cta-button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+
+
+  i {
+    margin-right: 0.5rem;
+  }
+
+  &.primary {
+    background: $primary;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      background: darken($primary, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba($primary, 0.3);
+    }
+  }
+
+  &.secondary {
+    background: white;
+    color: $primary;
+    border: 1px solid $gray;
+
+    &:hover {
+      border-color: $primary;
+      background: $primary-light;
+    }
+  }
+
+  &.large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Community CTA */
+.community-cta {
+  //background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  background-color: linear-gradient(135deg, #222, #333);
+  background-image: url("/assets/images/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5rem 2rem;
+  margin-top: 5rem;
+
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+
+    .hero-text {
+      margin-bottom: 3rem;
+
+      h1 {
+        font-size: 2.8rem !important;
+      }
+
+      .subtitle, .stats {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .photo-grid {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .cta-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.3rem !important;
+  }
+
+  .cta-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .community-cta h2 {
+    font-size: 2rem !important;
+  }
+}

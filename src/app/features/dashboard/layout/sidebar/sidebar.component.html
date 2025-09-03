@@ -1,0 +1,23 @@
+<aside class="sidebar" [class.collapsed]="isCollapsed">
+  <div class="logo">
+    <img src="/logo-momentora.svg" alt="Logo">
+    <button class="collapse-btn" (click)="toggleCollapse()">
+      <i class="fas" [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"></i>
+    </button>
+  </div>
+
+  <nav class="nav-links">
+    @for (link of navLinks; track link) {
+      <a
+        [routerLink]="link.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <i class="{{ link.icon }}"></i>
+        @if (isCollapsed) {
+          <span>{{ link.label }}</span>
+        }
+      </a>
+    }
+  </nav>
+</aside>

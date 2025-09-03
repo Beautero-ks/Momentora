@@ -1,0 +1,99 @@
+<div class="photo-detail-container" *ngIf="!isLoading && photo">
+  <div class="main-content">
+    <!-- Main photo section -->
+    <div class="photo-container">
+      <img [src]="photo.imageUrl" [alt]="photo.title" class="main-photo">
+    </div>
+
+<!--    &lt;!&ndash; Suggested photos section &ndash;&gt;-->
+<!--    <div class="suggested-section">-->
+<!--      <h3>More from this collection</h3>-->
+<!--      <div class="suggested-photos">-->
+<!--        <div class="suggested-photo" *ngFor="let suggested of suggestedPhotos">-->
+<!--          <img [src]="suggested.url" [alt]="suggested.title">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!-- Community CTA Banner -->
+    <app-community-cta />
+
+    <!-- Related images section -->
+<!--    <div class="related-section">-->
+<!--      <h3>Related Images</h3>-->
+<!--      <div class="related-grid">-->
+<!--        <div class="related-photo" *ngFor="let related of relatedPhotos">-->
+<!--          <img [src]="related.url" [alt]="related.title">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <button class="load-more">Load more</button>-->
+<!--    </div>-->
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <div class="actions">
+        <button class="download-btn" (click)="downloadImage()">
+          <i class="fas fa-download"></i> Download
+        </button>
+        <div class="action-icons">
+          <button class="icon-btn" title="Comments">
+            <i class="fas fa-comment"></i>
+          </button>
+          <button class="icon-btn" title="Add to collection" (click)="toggleSave()">
+            <i class="fas" [ngClass]="{'fa-bookmark': !photo.isSaved, 'fa-bookmark-solid': photo.isSaved}"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="photo-stats">
+        <div class="stat-item">
+          <i class="fas fa-eye"></i>
+          <span> Views {{photo.views | number}}</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-download"></i>
+          <span> Downloads {{photo.downloads | number}} </span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-expand"></i>
+          <span> Resolution {{photo.resolution}}</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Published {{photo.publishedDate | date}}</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-heart" [ngClass]="{'liked': photo.isLiked}" (click)="toggleLike()"></i>
+          <span> Likes {{photo.likes | number}}</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-file-image"></i>
+          <span>{{photo.fileType}}</span>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-bookmark"></i>
+          <span>{{photo.saves | number}} saves</span>
+        </div>
+      </div>
+
+      <div class="author-info">
+        <div class="author-header">
+          <img [src]="photo.author.avatar" [alt]="photo.author.name" class="author-avatar">
+          <div class="author-details">
+            <h4>{{photo.author.name}}</h4>
+            <button class="follow-btn" (click)="toggleFollow()">
+              {{photo.author.isFollowing ? 'Following' : '+ Follow'}}
+            </button>
+          </div>
+        </div>
+        <p class="author-bio">{{photo.author.bio}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading-spinner" *ngIf="isLoading">
+  <i class="fas fa-spinner fa-spin"></i>
+</div>

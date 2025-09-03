@@ -1,0 +1,70 @@
+<header class="momentora-header" [class.dark]="isDarkMode">
+  <!-- Logo cliquable -->
+  <a routerLink="/" class="brand-group">
+    <img src="/logo-momentora.svg" alt="Momentora" class="logo-pulse">
+    <span class="brand-name">Momentora</span>
+    <!-- Toggle menu for mobile -->
+<!--    <button class="menu-toggle" (click)="toggleMobileMenu()">-->
+<!--      <i class="fas fa-bars"></i>-->
+<!--    </button>-->
+
+  </a>
+
+  <!-- Barre de recherche dynamique -->
+  <div class="search-container" [class.active]="searchFocused">
+    <input
+      type="text"
+      placeholder="Search a moments..."
+      (focus)="searchFocused = false"
+      (blur)="searchFocused = false"
+    >
+    <i class="fas fa-search search-icon"></i>
+    <div class="search-results" >
+      @if (searchResults.length > 0){
+        @for (result of searchResults; track result.id) {
+          <div class="result-item">
+            {{ result.title }}
+          </div>
+        }
+      }
+    </div>
+  </div>
+
+  <!-- Navigation interactive -->
+  <nav class="main-nav" [class.open]="mobileMenuOpen">
+    <a routerLink="/explore" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-btn">
+      <i class="fas fa-compass"></i>
+      <span class="btn-label">Explore</span>
+    </a>
+
+    <button class="nav-btn upload-btn" (click)="openUploadDialog()">
+      <i class="fas fa-plus-circle"></i>
+      <span class="btn-label">Upload</span>
+    </button>
+
+    <button class="nav-btn notif-btn" (click)="toggleNotifications()">
+      <i class="fas fa-bell"></i>
+      @if (unreadNotifs > 0) {
+        <span class="notif-badge">{{ unreadNotifs }}</span>
+      }
+    </button>
+
+    <div class="user-menu" (click)="toggleUserMenu()">
+      <img [src]="userAvatar" alt="Profile" class="user-avatar">
+      <div class="dropdown-menu">
+        @if (!showUserMenu){
+            <a routerLink="/profile">My Profile</a>
+            <a (click)="toggleDarkMode()">
+              {{ isDarkMode ? 'Light Mode' : 'Night Mode' }}
+            </a>
+            <a (click)="logout()">Déconnexion</a>
+        }
+      </div>
+    </div>
+  </nav>
+</header>
+
+@if (showUploadModal) {
+  <app-upload-modal (close)="closeUploadDialog()"></app-upload-modal>
+}
+

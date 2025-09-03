@@ -1,0 +1,95 @@
+<!-- Modern Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Turn Moments<br>Into <span class="highlight">Everlasting Stories</span></h1>
+      <p class="subtitle">Where every photo becomes part of your visual legacy</p>
+
+      <div class="cta-container">
+        <a routerLink="/auth/signup" class="cta-button primary">
+          Start Sharing Free
+        </a>
+        <a routerLink="/explore" class="cta-button secondary">
+          <i class="fas fa-play"></i> See How It Works
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <span class="number">10K+</span>
+          <span class="label">Daily Moments</span>
+        </div>
+        <div class="stat-item">
+          <span class="number">500+</span>
+          <span class="label">Communities</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-grid">
+<!--        <div class="photo-item large" style="background-image: url('https://images.pexels.com/photos/19598358/pexels-photo-19598358/free-photo-of-noir-et-blanc-route-paysage-nature.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>-->
+        <div class="photo-item small" style="background-image: url('https://images.pexels.com/photos/32333374/pexels-photo-32333374/free-photo-of-joyeuse-fete-d-anniversaire-avec-des-amis-et-un-gateau.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div class="photo-item small" style="background-image: url('https://images.pexels.com/photos/7328265/pexels-photo-7328265.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+        <div class="photo-item medium" style="background-image: url('https://images.pexels.com/photos/5064896/pexels-photo-5064896.jpeg?auto=compress&cs=tinysrgb&w=600')"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Value Proposition Section -->
+<section class="section-bg value-props-section">
+  <div class="value-props container">
+    <div class="prop-item">
+      <div class="icon-circle">
+        <i class="fas fa-magic"></i>
+      </div>
+      <h3>Smart Enhancement</h3>
+      <p>AI-powered tools that make your photos shine</p>
+    </div>
+
+    <div class="prop-item">
+      <div class="icon-circle">
+        <i class="fas fa-lock"></i>
+      </div>
+      <h3>Private Sharing</h3>
+      <p>Full control over who sees your moments</p>
+    </div>
+
+    <div class="prop-item">
+      <div class="icon-circle">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <h3>Lightning Fast</h3>
+      <p>Upload and view without delays</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trending Gallery Preview -->
+<section class="section-bg trending-gallery-section">
+  <div class="trending-gallery container">
+    <div class="section-header">
+      <h2>Today's Trending Visual Stories</h2>
+      <a routerLink="/explore" class="view-all">Browse All <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="gallery-grid">
+      <div *ngFor="let photo of trendingPhotos" class="gallery-item">
+        <img [src]="photo.imageUrl" [alt]="photo.title" class="image-container"/>
+        <div class="overlay">
+          <h3>{{ photo.title }}</h3>
+          <div class="likes">
+            <i class="fa fa-heart"></i>
+            {{ photo.likes }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Community CTA -->
+<app-community-cta />

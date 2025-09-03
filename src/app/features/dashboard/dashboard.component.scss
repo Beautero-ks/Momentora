@@ -1,0 +1,158 @@
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .dashboard-content {
+    display: flex;
+    flex: 1;
+  }
+
+  .main-view {
+    flex: 1;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+}
+
+.dash-header, .dash-footer {
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dash-sidebar {
+  width: 250px;
+  background: #f0f0ff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  .profile {
+    text-align: center;
+    margin-bottom: 2rem;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    span {
+      display: block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      transition: background 0.3s;
+
+      &:hover, &.active {
+        background: #d6ccff;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//:host {
+//  display: block;
+//  padding: 3rem 2rem;
+//  background: #f8f9fd;
+//  min-height: 100vh;
+//}
+//
+//.dashboard-header {
+//  text-align: center;
+//  margin-bottom: 3rem;
+//
+//  h1 {
+//    font-size: 2.5rem;
+//    font-weight: 700;
+//    color: #333;
+//    margin-bottom: 0.5rem;
+//  }
+//
+//  p {
+//    font-size: 1rem;
+//    color: #777;
+//  }
+//}
+//
+//.stats-grid {
+//  display: grid;
+//  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+//  gap: 2rem;
+//  max-width: 1000px;
+//  margin: 0 auto;
+//
+//  .stat-card {
+//    background: white;
+//    border-radius: 1rem;
+//    padding: 2rem;
+//    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+//    text-align: center;
+//    transition: transform 0.3s ease;
+//
+//    &:hover {
+//      transform: translateY(-5px);
+//    }
+//
+//    h3 {
+//      font-size: 1.2rem;
+//      color: #555;
+//      margin-bottom: 0.5rem;
+//    }
+//
+//    .value {
+//      font-size: 2rem;
+//      font-weight: bold;
+//      color: #6E44FF;
+//    }
+//  }
+//}
+//
+//.logout-btn {
+//  display: flex;
+//  justify-content: center;
+//  margin-top: 3rem;
+//
+//  button {
+//    background: #ff3e3e;
+//    color: white;
+//    padding: 0.8rem 2rem;
+//    border: none;
+//    border-radius: 30px;
+//    font-weight: 600;
+//    font-size: 1rem;
+//    cursor: pointer;
+//    transition: background 0.3s ease;
+//
+//    &:hover {
+//      background: darken(#ff3e3e, 10%);
+//    }
+//  }
+//}

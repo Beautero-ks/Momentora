@@ -1,0 +1,27 @@
+.photos-page {
+  h2 { margin-bottom: 1.5rem; }
+  .loading { text-align: center; }
+  .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .info {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}

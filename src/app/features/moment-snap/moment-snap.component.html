@@ -1,0 +1,23 @@
+<div class="photo-card">
+  <div class="photo-container">
+    <img [src]="momentSnap.imageUrl"
+         [alt]="momentSnap.title"
+         loading="lazy"
+         (click)="viewDetails()">
+
+    <button class="like-btn"
+            (click)="onLikeClick($event)"
+            [class.liked]="isLiked">
+      <i class="fa-solid fa-heart"></i> {{ momentSnap.likes + (isLiked ? 1 : 0 )}}
+    </button>
+  </div>
+
+  <div class="photo-info">
+    <h3>{{ momentSnap.title }}</h3>
+    <div class="author">
+      <img [src]="momentSnap.author.avatar || 'assets/default-avatar.jpg'"
+           class="avatar" alt="Author Avatar">
+      <span>{{ momentSnap.author || 'Anonymous' }}</span>
+    </div>
+  </div>
+</div>

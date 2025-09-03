@@ -1,0 +1,14 @@
+<section class="auth-form">
+  <h2>Login</h2>
+  <form (submit)="onLogin(); $event.preventDefault()">
+    <input [(ngModel)]="email" name="email" type="email" placeholder="Email" required>
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
+    <button class="login-button" type="submit">Login</button>
+  </form>
+
+  <button class="login-google" (click)="loginWithGoogle()"><i class="fab fa-google"></i> Continue with Google</button>
+
+  @if (errorMessage){
+    <p class="errorMessage">{{ errorMessage }}</p>
+  }
+</section>

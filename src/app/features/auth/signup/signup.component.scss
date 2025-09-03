@@ -1,0 +1,130 @@
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6E44FF, #FF7E33);
+
+  .auth-box {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input {
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #6E44FF;
+          outline: none;
+        }
+      }
+
+      button {
+        background: #6E44FF;
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: darken(#6E44FF, 5%);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .divider {
+      text-align: center;
+      margin: 1rem 0;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background: #ddd;
+      }
+
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+    }
+
+    .google-btn {
+      width: 100%;
+      padding: 12px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      i {
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        background: #f5f5f5;
+      }
+    }
+
+    //.redirect-text {
+    //  margin-top: 1.5rem;
+    //  text-align: center;
+    //
+    //  a {
+    //    color: #6e44ff;
+    //    font-weight: bold;
+    //  }
+    //}
+    //
+    .redirect {
+      text-align: center;
+      margin-top: 1rem;
+
+      a {
+        color: #6E44FF;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

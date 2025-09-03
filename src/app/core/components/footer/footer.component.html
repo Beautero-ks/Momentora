@@ -1,0 +1,79 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Brand Column -->
+    <div class="footer-brand">
+      <div class="logo-container">
+        <img src="/logo-momentora.svg" alt="Momentora" class="footer-logo">
+        <span class="brand-name">Momentora</span>
+      </div>
+      <p class="tagline">Where moments become everlasting stories</p>
+
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-nav">
+      <div class="nav-column">
+        <h3 class="nav-title">Explore</h3>
+        <ul>
+          <li><a routerLink="/trending">Trending</a></li>
+          <li><a routerLink="/categories">Categories</a></li>
+          <li><a routerLink="/creators">Top Creators</a></li>
+          <li><a routerLink="/events">Events</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-column">
+        <h3 class="nav-title">Company</h3>
+        <ul>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/careers">Careers</a></li>
+          <li><a routerLink="/blog">Blog</a></li>
+          <li><a routerLink="/press">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-column">
+        <h3 class="nav-title">Support</h3>
+        <ul>
+          <li><a routerLink="/help">Help Center</a></li>
+          <li><a routerLink="/safety">Safety</a></li>
+          <li><a routerLink="/privacy">Privacy</a></li>
+          <li><a routerLink="/terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h3 class="newsletter-title">Stay Inspired</h3>
+      <p>Get weekly photo tips and community highlights</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="subscribe-btn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    <p>&copy; {{ currentYear }} Momentora. All visual stories belong to their creators.</p>
+    <div class="legal-links">
+      <a routerLink="/privacy">Privacy Policy</a>
+      <a routerLink="/terms">Terms of Service</a>
+      <a routerLink="/cookies">Cookie Settings</a>
+    </div>
+  </div>
+</footer>

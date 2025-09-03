@@ -1,0 +1,75 @@
+<div class="dashboard-layout">
+  <app-dasboard-header />
+  <div class="dashboard-content">
+    <app-sidebar />
+    <main class="main-view">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <app-dasboard-footer />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash; dashboard.component.html &ndash;&gt;-->
+<!--<section class="dashboard">-->
+<!--  <div class="dashboard-header">-->
+<!--    <h1>Welcome back, {{ userName || 'Guest' }}!</h1>-->
+<!--    <p>Your photo journey starts here.</p>-->
+<!--  </div>-->
+
+<!--  <div class="stats-grid">-->
+<!--    <div class="stat-card">-->
+<!--      <i class="fas fa-image"></i>-->
+<!--      <div class="value">-->
+<!--        <h3>{{ stats.totalPhotos }}</h3>-->
+<!--        <span>Total Photos</span>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="stat-card">-->
+<!--      <i class="fas fa-heart"></i>-->
+<!--      <div class="value">-->
+<!--        <h3>{{ stats.totalLikes }}</h3>-->
+<!--        <span>Total Likes</span>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="stat-card">-->
+<!--      <i class="fas fa-users"></i>-->
+<!--      <div class="value">-->
+<!--        <h3>{{ stats.totalFollowers }}</h3>-->
+<!--        <span>Followers</span>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="stat-card">-->
+<!--      <i class="fas fa-bolt"></i>-->
+<!--      <div class="value">-->
+<!--        <h3>{{ stats.weeklyUploads }}</h3>-->
+<!--        <span>Uploads This Week</span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--<section>-->
+<!--  @for (snap of snaps; track snap.title) {-->
+<!--    <div>-->
+<!--      <div>{{snap.author?.name}} </div>-->
+<!--      <div>{{snap.title}} </div>-->
+<!--      <div>{{snap.isLiked}} </div>-->
+<!--      <div>{{snap.imageUrl}} </div>-->
+<!--      <div>{{snap.description}} </div>-->
+<!--    </div>-->
+<!--  }-->
+<!--</section>-->

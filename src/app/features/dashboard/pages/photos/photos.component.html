@@ -1,0 +1,15 @@
+<section class="photos-page">
+  <h2>My Photos</h2>
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div class="photos-grid">
+    @for (photo of photos; track photo.id) {
+      <div class="card">
+        <img [src]="photo.imageUrl" [alt]="photo.title" />
+        <div class="info">
+          <h4>{{ photo.title }}</h4>
+          <p><i class="fa fa-heart"></i> {{ photo.likes }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</section>

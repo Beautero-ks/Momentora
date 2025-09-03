@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "user123",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "avatar": "https://source.unsplash.com/random/100x100?portrait",
+      "bio": "Professional photographer based in New York"
+    },
+    {
+      "id": "u1",
+      "name": "John Doe",
+      "avatar": "https://source.unsplash.com/random/100x100?portrait",
+      "email": "john@example.com",
+      "bio": "Professional photographer specializing in art photography.",
+      "isFollowing": false
+    },
+    {
+      "id": "u2",
+      "name": "Sudo",
+      "avatar": "https://source.unsplash.com/random/100x100?portrait&1",
+      "email": "sudo@example.com",
+      "bio": "Studio photography expert.",
+      "isFollowing": true
+    }
+  ],
+  "otps": [],
+  "photos": [
+    {
+      "id": "snap001",
+      "title": "Misty Mountains",
+      "description": "Explore the Misty Mountains in Middle-earth.",
+      "createdDate": "2024-06-01T12:00:00Z",
+      "imageUrl": "https://images.unsplash.com/photo-1743482858217-5aef42cfc636?q=80&w=1470",
+      "likes": 10,
+      "views": 350,
+      "downloads": 120,
+      "resolution": "1920x1080",
+      "fileType": "jpg",
+      "saves": 7,
+      "isLiked": false,
+      "isSaved": false,
+      "publishedDate": "2024-06-01T12:00:00Z",
+      "location": "Middle-earth",
+      "tags": ["Nature"],
+      "userId": "user123",
+      "author": {
+        "name": "J.R.R. Tolkieny",
+        "avatar": "https://picsum.photos/200/300",
+        "bio": "Professional photographer specializing in nature photography",
+        "isFollowing": false
+      }
+    },
+    {
+      "id": "snap002",
+      "title": "Studio Photography",
+      "description": "Change the way you capture moments.",
+      "createdDate": "2024-06-02T12:00:00Z",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1682097066897-209d0d9e9ae5",
+      "likes": 50,
+      "views": 900,
+      "downloads": 320,
+      "resolution": "1920x1080",
+      "fileType": "jpg",
+      "saves": 20,
+      "isLiked": false,
+      "isSaved": false,
+      "publishedDate": "2024-06-02T12:00:00Z",
+      "location": "Studio",
+      "tags": ["Urban"],
+      "userId": "user123",
+      "author": {
+        "name": "Sudo",
+        "avatar": "https://picsum.photos/200/300",
+        "bio": "Studio light expert",
+        "isFollowing": false
+      }
+    },
+    {
+      "id": "ms1",
+      "title": "Studio Photography",
+      "description": "Change the way you capture moments...",
+      "createdDate": "2024-06-01T12:00:00.000Z",
+      "authorId": "u2",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1682097066897-209d0d9e9ae5?w=500",
+      "likes": 50,
+      "views": 1020,
+      "downloads": 150,
+      "resolution": "1920x1080",
+      "fileType": "jpg",
+      "saves": 3,
+      "isLiked": false,
+      "isSaved": false,
+      "tags": ["Urban"],
+      "location": "New York",
+      "publishedDate": "2024-06-01T12:00:00.000Z"
+    }
+  ],
+  "sessions": []
+}

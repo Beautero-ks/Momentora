@@ -1,0 +1,66 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: width 0.3s ease;
+  position: sticky;
+  top: 0;
+
+  &.collapsed {
+    width: 70px;
+
+    .nav-links a span {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    img {
+      height: 40px;
+    }
+
+    .collapse-btn {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: white;
+      padding: 0.75rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+
+      &:hover,
+      &.active {
+        background-color: #1f2937;
+      }
+
+      i {
+        font-size: 1.2rem;
+        width: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
